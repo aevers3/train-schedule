@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Table showing train information -->
+        <div class="row">
+            <table class="table" id="train-table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Arriving in:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!--  Administrator form for adding trains -->
+        <!-- Include fields to submit: Name of train, Destination, First train time, Frequency of train -->
+        <div class="row">
+            <div class="card col-12">
+                <div class="card-header">
+                    Add a Train
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="train-name-input">Train Name:</label>
+                            <input type="text" class="form-control" id="train-name-input" 
+                                placeholder="Train Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination-input">Destination:</label>
+                            <input type="email" class="form-control" id="destination-input" 
+                                placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="first-train-time">First Train Arrival Time</label>
+                            <input type="time" class="form-control" id="first-train-input" 
+                                placeholder="Arrival Time">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency-input">Frequency of Arrival (Minutes)</label>
+                            <input type="number" class="form-control" id="frequency-input" 
+                                placeholder="Frequency of Arrival">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="add-train">Add Train</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Scripts start here -->
+        <!-- jQuery -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- moment.js -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script src="assets/javascript/scripts.js"></script>
+</body>
+
+</html>
