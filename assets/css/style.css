@@ -1,0 +1,103 @@
+/* General styles... */
+
+body {
+    background-color: black;
+    font-family: 'Libre Baskerville', serif;
+    background-image: url('../images/train-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+td, th {
+    text-align: center;
+    color: white;
+}
+
+td {
+    font-family: 'Montserrat', sans-serif;
+}
+
+th {
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, .9)
+}
+
+h2 {
+    text-shadow: 2px 2px 2px #000;
+}
+
+h3 {
+    text-align: center;
+}
+
+form {
+    padding: 15px;
+    margin-top: -25px;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+label {
+    color: white;
+}
+
+/* Styling for conductor's console */
+#conductors-console-header {
+    color: white;
+    text-align: center;
+}
+
+.card, tbody {
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: 3px 3px 6px #000;
+}
+
+.card-header {
+    border: 0;
+}
+
+/* Table headers */
+.bg-black {
+    background-color: #111;
+}
+
+
+/* This code styles the header div on top of/interrupting the border */
+#add-train-header-text  {
+    color: white;
+    z-index: 2;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 300;
+    text-shadow: 2px 2px 3px black;
+}
+
+#add-train {
+    width: 40%;
+    /* background-color: rgb(0, 128, 0); */
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 2px 2px 2px #000;
+    background-color: rgba(0, 128, 0, 0);
+    border: 3px solid rgb(0, 128, 0);
+    max-width: 400px;
+    margin: auto 30%;
+    
+}
+
+#add-train:hover {
+    /* background-color: rgba(0, 128, 0, .9); */
+    box-shadow: 3px 3px 6px #000;
+    font-weight: bold;
+}
+
+#add-train:active {
+    /* background-color: rgba(0, 128, 0, .4); */
+    box-shadow: 1px 1px 1px #000;
+}
+
+/* ******************* MEDIA QUERIES ******************* */
+@media only screen and (max-width: 576px) {
+        
+    
+}

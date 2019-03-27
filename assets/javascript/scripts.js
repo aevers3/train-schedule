@@ -23,10 +23,13 @@ $('#add-train').on('click', function () {
   var firstTrain = $('#first-train-input').val().trim();
   var frequency = $('#frequency-input').val().trim();
 
-  // console.log(trainName);
-  // console.log(destination);
-  // console.log(firstTrain);
-  // console.log(frequency);
+  if ((trainName === '') ||
+    (destination === '') ||
+    (firstTrain === '') ||
+    (frequency === '')) {
+    return false;
+  }
+
 
   // Create a new object filled with the user input from form
   var newTrain = {
@@ -41,6 +44,7 @@ $('#add-train').on('click', function () {
   // Push newTrain object to the database
   database.ref().push({ newTrain });
 
+  // Clear fields in add-train form
   $("#train-name-input").val("");
   $("#destination-input").val("");
   $("#first-train-input").val("");
@@ -59,10 +63,11 @@ database.ref().on("child_added", function (childSnapshot) {
   var firstTrain = childSnapshot.val().newTrain.firstTrain;
   var frequency = childSnapshot.val().newTrain.frequency;
 
-  // console.log(trainName);
+  console.log('TRAIN NAME ' + trainName);
   // console.log(destination);
   // console.log(firstTrain);
   // console.log(frequency);
+
 
 
 
@@ -90,6 +95,7 @@ database.ref().on("child_added", function (childSnapshot) {
   var minutesTillTrain = frequency - tRemainder;
   console.log('MINUTES TILL TRAIN: ' + minutesTillTrain);
 
+  // Arrival time of next train
   var nextTrain = moment().add(minutesTillTrain, 'minutes');
   console.log('NEXT TRAIN: ' + moment(nextTrain).format("hh:mm"));
 
@@ -97,16 +103,15 @@ database.ref().on("child_added", function (childSnapshot) {
 
   // *********************** ADD TO TABLE ON SCREEN ***********************
   // Build new table row and append all of the <td>'s
-  var newRow = $('<tr>').append(
-    $("<td>").text(''),
+  var newRow = $('<tr>').attr('class', trainName)
+
+  newRow.append(
     $("<td>").text(trainName),
     $("<td>").text(destination),
-    $("<td>").text(moment(nextTrain).format('hh:mm')),
+    $("<td>").text(moment(nextTrain).format('hh:mm A')),
     $("<td>").text(minutesTillTrain),
   );
 
   // Append newly populated row to DOM.
   $("#train-table > tbody").append(newRow);
-
 });
-

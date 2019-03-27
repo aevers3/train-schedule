@@ -6,19 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Montserrat:300,400" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container my-sm-5">
         <!-- Table showing train information -->
         <div class="row">
             <table class="table" id="train-table">
-                <thead class="thead-dark">
+                <thead class="bg-black">
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col" colspan="4"><h2>Arriving Trains</h2></th>
+                    </tr>
+                    <tr>
                         <th scope="col">Train Name</th>
                         <th scope="col">Destination</th>
                         <th scope="col">Arrival Time</th>
@@ -26,7 +29,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
             </table>
         </div>
@@ -34,30 +37,28 @@
         <!--  Administrator form for adding trains -->
         <!-- Include fields to submit: Name of train, Destination, First train time, Frequency of train -->
         <div class="row">
-            <div class="card col-12">
-                <div class="card-header">
-                    Add a Train
+            <div class="card col-12 px-0">
+                <div class="card-header bg-black">
+                    <h2 id="conductors-console-header">Conductor's Console</h1>
                 </div>
-                <div class="card-body">
-                    <form>
+                <div class="card-body pb-0">
+                        <h3 id="add-train-header-text">Add a Train</h3>
+                    <form class="mb-5">
                         <div class="form-group">
                             <label for="train-name-input">Train Name:</label>
-                            <input type="text" class="form-control" id="train-name-input" 
-                                placeholder="Train Name">
+                            <input type="text" class="form-control" id="train-name-input" placeholder="Train Name">
                         </div>
                         <div class="form-group">
                             <label for="destination-input">Destination:</label>
-                            <input type="email" class="form-control" id="destination-input" 
-                                placeholder="Destination">
+                            <input type="email" class="form-control" id="destination-input" placeholder="Destination">
                         </div>
                         <div class="form-group">
                             <label for="first-train-time">First Train Arrival Time</label>
-                            <input type="time" class="form-control" id="first-train-input" 
-                                placeholder="Arrival Time">
+                            <input type="time" class="form-control" id="first-train-input" placeholder="Arrival Time">
                         </div>
                         <div class="form-group">
                             <label for="frequency-input">Frequency of Arrival (Minutes)</label>
-                            <input type="number" class="form-control" id="frequency-input" 
+                            <input type="number" class="form-control" id="frequency-input"
                                 placeholder="Frequency of Arrival">
                         </div>
                         <button type="submit" class="btn btn-primary" id="add-train">Add Train</button>
