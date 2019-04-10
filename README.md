@@ -25,3 +25,7 @@ Create a train scheduling app that allows users to:
 6. jQuery
 7. Firebase
 
+## Deployed App URL
+[Train Schedule App](https://aevers3.github.io/train-schedule/)
+
+This project was created and is maintained by Alex Evers.
