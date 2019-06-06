@@ -1,7 +1,7 @@
 /* General styles... */
 
 body {
-    background-color: black;
+    background-color: #111;
     font-family: 'Libre Baskerville', serif;
     background-image: url('../images/train-bg.jpg');
     background-size: cover;
@@ -9,7 +9,11 @@ body {
     background-attachment: fixed;
 }
 
-td, th {
+.header-bar {
+    background-color: #111;
+}
+
+td, th, h1 {
     text-align: center;
     color: white;
 }
@@ -69,7 +73,7 @@ label {
     z-index: 2;
     /* font-family: 'Montserrat', sans-serif; */
     font-weight: 300;
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px #111;
 }
 
 #add-train {
