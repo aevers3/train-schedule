@@ -1,10 +1,12 @@
-# Train Schedule
+# Train Schedule++
 
 ## The Challenge
 Create a train scheduling app that allows users to:
 1. View information about arriving trains, including Train Name, Destination, and Minutes Until Arrival.
 2. Add new trains to the schedule and display that train on the page.
 3. Keep track of the trains over multiple page refreshes.
+
+![Train Schedule++ Screenshot](assets/images/train-schedule-screenshot.png)
 
 ## The Method
 1. When a user completes the "Add Train" form, that new train and its data are stored to a Firebase database.
